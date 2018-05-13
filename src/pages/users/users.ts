@@ -10,6 +10,7 @@ export class UsersPage {
   constructor(private navCtrl: NavController) { }
 
   onLoadUser(name: string) {
-    this.navCtrl.push(UserPage, { name });
+    this.navCtrl.push(UserPage, { name })
+      .catch(console.log);
   }
 }
