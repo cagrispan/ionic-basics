@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+import { NavParams, NavController } from 'ionic-angular';
 
 @Component({
   selector: 'page-user',
@@ -8,9 +8,16 @@ import { NavParams } from 'ionic-angular';
 export class UserPage implements OnInit {
   name: string;
 
-  constructor(private navParams: NavParams) { }
+  constructor(
+    private navParams: NavParams,
+    private navCtrl: NavController
+  ) { }
 
   ngOnInit(): void {
     this.name = this.navParams.get('name');
+  }
+
+  onGoBack() {
+    this.navCtrl.popToRoot();
   }
 }
