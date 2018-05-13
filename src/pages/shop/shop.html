@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Shop</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngFor="let product of products">
+    <button ion-button (click)="onGoToBuyout(product)">{{ product }}</button>
+    <hr>
+  </div>
+</ion-content>
